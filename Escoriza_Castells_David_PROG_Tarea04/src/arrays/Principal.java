@@ -1,5 +1,6 @@
 package arrays;
 
+import java.awt.BorderLayout;
 import utilidades.Entrada;
 
 /**
@@ -8,7 +9,7 @@ import utilidades.Entrada;
  */
 public class Principal {
     public static void main(String[] args) {
-        int cantidad;
+        int cantidad, mayores = 0, menores = 0, menor = 0, mayor = 0;
         Triangulo array[];
         Punto A, B, C;
         double suma = 0, media;
@@ -33,14 +34,32 @@ public class Principal {
             
         }
         
-
         for (int i=0; i<cantidad; i++){
             suma+=array[i].perimetro();
-            
         }
         
         media=suma/cantidad;
         System.out.println("La media de los perímetros es "+media);
+
+        
+        for (int i=0; i<cantidad; i++){
+            if (array[i].perimetro()>=media){
+                mayores+=1;
+            } else {
+                menores+=1;
+            }
+            if (array[i].perimetro()>mayor){
+                mayor=i;
+            }
+            if (array[i].perimetro()<menor){
+                menor=i;
+            }
+        }
+        
+        System.out.println("Hay "+mayores+" triángulos mayores o iguales a la media.");
+        System.out.println("Hay "+menores+" triángulos menores a la media.");
+        System.out.println("El triángulo con mayor perímetro es "+array[mayor].toString());
+        System.out.println("El triángulo con menor perímetro es "+array[menor].toString());
         
     }
 }
