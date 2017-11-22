@@ -13,7 +13,15 @@ public class Principal {
         Punto A, B, C;
         
         System.out.print("Indica cuántos triángulos quieres generar: ");
-        cantidad=Entrada.entero();
+        
+        do {
+            cantidad=Entrada.entero();
+        
+            if (cantidad<=0){
+                System.out.print("No es un número válido. Introduce un número mayor que 0: ");
+            }
+        } while (cantidad<=0);
+      
         array=new Triangulo[cantidad];
                 
         for (int i=0; i<cantidad; i++){
