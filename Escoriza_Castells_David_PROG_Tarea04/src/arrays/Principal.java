@@ -11,6 +11,7 @@ public class Principal {
         int cantidad;
         Triangulo array[];
         Punto A, B, C;
+        double suma = 0, media;
         
         System.out.print("Indica cuántos triángulos quieres generar: ");
         
@@ -29,8 +30,17 @@ public class Principal {
             B=new Punto((Math.random()*100), (Math.random()*100));
             C=new Punto((Math.random()*100), (Math.random()*100));
             array[i]=new Triangulo(A,B,C);
+            
         }
         
+
+        for (int i=0; i<cantidad; i++){
+            suma+=array[i].perimetro();
+            
+        }
+        
+        media=suma/cantidad;
+        System.out.println("La media de los perímetros es "+media);
         
     }
 }
