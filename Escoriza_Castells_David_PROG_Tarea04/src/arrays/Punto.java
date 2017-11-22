@@ -21,5 +21,13 @@ public class Punto {
     public double getY(){
         return y;
     }    
+    
+    public String toString(){
+        return "("+x+","+y+")";
+    }
+    
+    public double distancia(Punto p){
+        return Math.sqrt(Math.pow(x+p.x,2)+Math.pow(y-p.y,2));
+    }
 }
 
