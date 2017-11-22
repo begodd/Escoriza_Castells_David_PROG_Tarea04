@@ -25,6 +25,9 @@ public class Triangulo {
         return c;
     }
 
+    public String toString(){
+        return "A"+a.toString()+" B"+b.toString()+" C"+c.toString();
+    }
 
 }
 
