@@ -28,6 +28,9 @@ public class Triangulo {
     public String toString(){
         return "A"+a.toString()+" B"+b.toString()+" C"+c.toString();
     }
-
+    
+    public double perimetro(){
+        return a.distancia(b)+a.distancia(c)+b.distancia(c);
+    }
 }
 
