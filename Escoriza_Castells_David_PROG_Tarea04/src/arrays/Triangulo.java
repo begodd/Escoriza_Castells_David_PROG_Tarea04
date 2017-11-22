@@ -13,7 +13,17 @@ public class Triangulo {
         this.c=c;
     }
 
-
+    public Punto getA(){
+        return a;
+    }
+    
+    public Punto getB(){
+        return b;
+    }
+    
+    public Punto getC(){
+        return c;
+    }
 
 
 }
