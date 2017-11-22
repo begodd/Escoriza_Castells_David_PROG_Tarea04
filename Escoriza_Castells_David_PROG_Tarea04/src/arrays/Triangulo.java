@@ -32,5 +32,6 @@ public class Triangulo {
     public double perimetro(){
         return a.distancia(b)+a.distancia(c)+b.distancia(c);
     }
+    
 }
 
